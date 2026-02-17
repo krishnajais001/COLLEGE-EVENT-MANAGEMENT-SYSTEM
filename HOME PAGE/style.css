@@ -154,7 +154,6 @@ header{
     text-align: center;
     position: relative;
     overflow: hidden;
-
     background: linear-gradient(135deg, #dbeafe 0%, #eef2ff 50%, #f5f3ff 100%);
 }
 
@@ -189,6 +188,11 @@ header{
     margin-bottom: 20px;
 }
 
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #555;
+}
 /* Gradient Animated Text */
 .gradient-text {
     background: linear-gradient(
