@@ -4,56 +4,334 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GGSIPU Event Mangemnt System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="main-page">
 <!-- Nav Bar -->
 <header>
+
     <!-- Logo -->
    <img src="../images/image.png" alt="logo" class="logo">
 
    <!-- Menu Items -->
    <div id="nav-bar">
         <ul id="nav-bar-lists">
-            <li class="nav-items">Home</li>
-            <li class="nav-items">Events</li>
-            <li class="nav-items">About</li>
-            <li class="nav-items">Contact Us</li>
+            <li class="nav-items"><a href="#main-page">Home</a></li>
+            <li class="nav-items"><a href="#events" >Events</a></li>
+            <li class="nav-items"><a href="">About</a></li>
+            <li class="nav-items"><a href="#contact-us">Contact Us</a></li>
         </ul>
    </div>
 
    <!-- Search Button -->
-   <div class="search-container">
-        <input type="text" placeholder="Search events..." class="search-input">
-        <button class="search-btn">Search</button>
+   <div class="serch-btn">
+        <input type="text" placeholder="Search Events..." class="srch-box">
+        <button class="srch-btn"><i class="fas fa-search"></i></button>
+   </div>
+
+   <!-- Menu Button -->
+   <div class="menu-btn">
+        <button class="btn" id="open-menu"><i class="fas fa-bars"></i></button>
+        <button class="btn" id="close-menu" ><i class="fas fa-xmark"></i></button>
    </div>
 
    <!-- Profile Button -->
-   <div class="profile-container">
-        <button class="profile-btn">Profile ▼</button>
-        <div class="profile-dropdown">
-            <button class="custom-button">Login</button>
-            <button class="custom-button">Sign Up</button>
-            <button class="custom-button">Admin Login</button>
-        </div>
+    <div class="profile-btn">
+        <button class="btn"   >Login</button>
+        <button class="btn" >Sign Up</button>
    </div>
+
 
 </header>
 
-<!-- Hero-Section -->
-<div class="herosection">
+<!-- Hero Section -->
+<section class="hero" >
     <div class="hero-content">
-     <h1 class="typing-text gradient-text">
-  Welcome to GGSIPU Event Management System
-</h1>
-
-
-        <p>Discover and manage all your college events in one place!</p>
-        <button class="custom-button">Explore Events</button>
+     
     </div>
-</div>
+</section>
+
+<!-- Upcoming Events -->
+<section class="upcoming-Events" id="events">
+
+  <div class="section-title">
+    <h2>🎉 Upcoming Events</h2>
+    <p>Register now and be part of the excitement!</p>
+  </div>
+
+  <div class="events-grid">
+
+    <!-- Event 1 -->
+    <div class="event-card">
+      <span class="badge">Limited Seats</span>
+      <img src="https://tse2.mm.bing.net/th/id/OIP.RZeQGAf7CMbJsT8VoTI4KAHaEo?rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+      <div class="card-content">
+        <h3>Tech Symposium 2026</h3>
+        <div class="details">📅 25 March 2026 | 📍 Auditorium Hall</div>
+        <p>Join the biggest technical event with coding competitions and AI sessions.</p>
+        <button class="register-btn" onclick="registerEvent('Tech Symposium 2026')">
+          Register Now
+        </button>
+      </div>
+    </div>
+
+    <!-- Event 2 -->
+    <div class="event-card">
+      <img src="../images/culture-img.png" alt="">
+      <div class="card-content">
+        <h3>Cultural Fest</h3>
+        <div class="details">📅 5 April 2026 | 📍 Open Ground</div>
+        <p>Dance, music, drama & exciting performances by students.</p>
+        <button class="register-btn" onclick="registerEvent('Cultural Fest')">
+          Register Now
+        </button>
+      </div>
+    </div>
+
+    <!-- Event 3 -->
+    <div class="event-card">
+      <img src="../images/ai-workshop-web-banner.jpg" alt="">
+      <div class="card-content">
+        <h3>Startup Workshop</h3>
+        <div class="details">📅 12 April 2026 | 📍 Seminar Hall</div>
+        <p>Learn entrepreneurship, funding strategies & startup growth ideas.</p>
+        <button class="register-btn" onclick="registerEvent('Startup Workshop')">
+          Register Now
+        </button>
+      </div>
+    </div>
+
+    <!-- Event 4 -->
+    <div class="event-card">
+      <span class="badge">New</span>
+      <img src="https://www.happytime.live/wp-content/uploads/2024/06/ai-workshop-web-banner.jpg" alt="">
+      <div class="card-content">
+        <h3>Workshop on AI</h3>
+        <div class="details">📅 20 April 2026 | 📍 Computer Lab</div>
+        <p>Learn about artificial intelligence and its applications in real-world scenarios.</p>
+        <button class="register-btn" onclick="registerEvent('Workshop on AI')">
+          Register Now
+        </button>
+      </div>
+    </div>
+
+    <!-- Event 5 -->
+    <div class="event-card">
+      <img src="../images/robotic-workshop_.jpg" alt="">
+      <div class="card-content">
+        <h3>Robotics Competition</h3>
+        <div class="details">📅 28 April 2026 | 📍 Robotics Lab</div>
+        <p>Build and compete with your own robot in this exciting competition.</p>
+        <button class="register-btn" onclick="registerEvent('Robotics Competition')">
+          Register Now
+        </button>
+      </div>
+    </div>
+
+    <!-- Event 6 -->
+    <div class="event-card">
+      <span class="badge">New</span>
+      <img src="../images/desing-wroskshop.webp" alt="">
+      <div class="card-content">
+        <h3>Design Thinking Workshop</h3>
+        <div class="details">📅 5 May 2026 | 📍 Design Studio</div>
+        <p>Learn design thinking principles and apply them to real-world challenges.</p>
+        <button class="register-btn" onclick="registerEvent('Design Thinking Workshop')">
+          Register Now
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Notificaiton Section -->
+<section class="notification-section">
+  <div class="notification-container">
+
+    <h2>🔔 Get Event Notifications</h2>
+    <p>Subscribe to receive updates about upcoming college events.</p>
+
+    <form class="notification-form" onsubmit="showMessage(event)">
+      <input type="text" placeholder="Enter Your Full Name" required>
+      <input type="text" placeholder="Enter Your Roll Number" required>
+      <input type="text" placeholder="Enter Your Branch" required>
+      <input type="text" placeholder="Enter Your Year of Study" required>
+      <input type="text" placeholder="Enter Your College Name" required>
+      <input type="email" placeholder="Enter Your Email Address" required>
+      <input type="text" placeholder="Enter Your Contact Number" required>
+
+
+      <select required>
+        <option value="">Select Event Category</option>
+        <option>Cultural</option>
+        <option>Technical</option>
+        <option>Workshop</option>
+        <option>Sports</option>
+        <option>Seminar</option>
+      </select>
+
+      <button type="submit">Subscribe Now</button>
+    </form>
+
+    <div class="success-message" id="successMessage">
+      🎉 You have successfully subscribed for event notifications!
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Conducted Events Section -->
+<section class="conducted-section">
+
+  <div class="section-header">
+    <h2>🎓 Successfully Conducted Events</h2>
+    <p>Explore seminars, workshops and fests we have successfully organized.</p>
+  </div>
+
+  <div class="conducted-grid">
+
+    <!-- Card 1 -->
+    <div class="conducted-card">
+      <img src="../images/completed events/ai-workshsop.jpg" alt="Seminar">
+      <div class="conducted-content">
+        <span class="event-type seminar">Seminar</span>
+        <h3>AI & Future Technology Seminar</h3>
+        <p>📅 12 Jan 2026 | 👥 250+ Participants</p>
+        <button class="view-btn">View Details</button>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="conducted-card">
+      <img src="../images/completed events/web-bootcmap.webp" alt="Workshop">
+      <div class="conducted-content">
+        <span class="event-type workshop">Workshop</span>
+        <h3>Web Development Bootcamp</h3>
+        <p>📅 28 Feb 2026 | 👥 180+ Participants</p>
+        <button class="view-btn">View Details</button>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="conducted-card">
+      <img src="../images/completed events/culturral-fest.webp" alt="Fest">
+      <div class="conducted-content">
+        <span class="event-type fest">Fest</span>
+        <h3>Annual Cultural Fest 2026</h3>
+        <p>📅 5 March 2026 | 👥 500+ Participants</p>
+        <button class="view-btn">View Details</button>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="conducted-card">
+      <img src="../images/completed events/sports-events.jpg" alt="Sports">
+      <div class="conducted-content">
+        <span class="event-type sports">Sports</span>
+        <h3>Inter-College Sports Meet 2026</h3>
+        <p>📅 15 April 2026 | 👥 300+ Participants</p>
+        <button class="view-btn">View Details</button>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="conducted-card">
+      <img src="../images/robotic-workshop_.jpg" alt="Tech">
+      <div class="conducted-content">
+        <span class="event-type tech">Technical</span>
+        <h3>Robotics & AI Hackathon 2026</h3>
+        <p>📅 10 May 2026 | 👥 150+ Participants</p>
+        <button class="view-btn">View Details</button>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+  <div class="conducted-card">
+      <img src="../images/robotic-workshop_.jpg" alt="Tech">
+      <div class="conducted-content">
+        <span class="event-type tech">Technical</span>
+        <h3>Tech Symposium 2026</h3>
+        <p>📅 10 May 2026 | 👥 150+ Participants</p>
+        <button class="view-btn">View Details</button>
+      </div>
+    </div>
+
+
+    
+  </div>
+
+</section>
+
+
+<!-- Footer Section -->
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- About -->
+    <div class="footer-col">
+        <img src="../images/image.png" alt="logo" class="logo">
+      <p>
+        A centralized platform to manage and register for college events 
+        like workshops, fests, seminars, and competitions.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#main-page">Home</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Categories -->
+    <div class="footer-col">
+      <h4>Event Categories</h4>
+      <ul>
+        <li><a href="#">Cultural</a></li>
+        <li><a href="#">Technical</a></li>
+        <li><a href="#">Workshops</a></li>
+        <li><a href="#">Sports</a></li>
+        <li><a href="#">Seminars</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-col" id="contact-us">
+      <h4>Contact Us</h4>
+      <p>📍 Dwarka, New Delhi - 110078</p>
+      <p>📧 ipuevents@college.edu</p>
+      <p>🌐 www.ipu.ac.in</p>
+      <p>📞 +91-11-25302171</p>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+  <div class="footer-bottom">
+    © 2026 College Event Management System | All Rights Reserved
+  </div>
+
+</footer>
 
 
 
@@ -61,57 +339,8 @@
 
 
 
-<!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-container">
-
-            <!-- About Section -->
-            <div class="footer-section">
-            <img src="../images/image.png" alt="" class="footer-logo logo">
-                <p>
-                    GGSIPU Event Management System is a platform designed to 
-                    manage college events like workshops, seminars, cultural 
-                    programs, and technical fests efficiently...
-                </p>
-            </div>
-
-            <!-- Quick Links -->
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-
-            <!-- Contact Info -->
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>Email: support@ggsipuems.com</p>
-                <p>Phone: +91 9876543210</p>
-                <p>Location: Delhi, India</p>
-            </div>
-
-            <!-- Social Media -->
-          <!-- Social Media -->
-            <div class="footer-section">
-                <h3>Follow Us</h3>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
-                    <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-                </div>
-            </div>
 
 
-        </div>
-
-        <div class="footer-bottom">
-            <p>© 2026 GGSIPU Event Management System | All Rights Reserved</p>
-        </div>
-    </footer>
-
+<script src="index.js"></script>
 </body>
 </html>
